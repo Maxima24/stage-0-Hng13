@@ -7,7 +7,7 @@ const configService = new ConfigService();
 const RATE_LIMIT = Number(configService.get('RATE_LIMIT')!) || 5;
 const RATE_LIMIT_MS = Number(configService.get('RATE_LIMIT_MS')!) || 60000;
 
-@Controller('api/profile')
+@Controller('/me')
 export class ProfileController {
     
   constructor(private readonly profileService: ProfileService) {}
