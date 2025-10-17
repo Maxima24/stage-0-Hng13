@@ -55,9 +55,9 @@ Create a `.env` file in the root directory and add any required environment vari
 
 ### 4️⃣ Start the Application
 - To run in dev mode: 
-pnpm  start:dev
+- pnpm  start:dev
 - To run in prod mode: 
-pnpm  start
+- pnpm  start
 ---
 ## 📬 Example API Response
 
