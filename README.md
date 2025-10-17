@@ -46,16 +46,17 @@ pnpm install
 ### 3️⃣ Configure Environment Variables
 
 Create a `.env` file in the root directory and add any required environment variables. For example:
--API_VERSION = "V1"
--CATS_FACTS= https://catfact.ninja/fact?max_length=24;
--RATE_LIMIT=10
--RATE_LIMIT_MS=60000
+
+- API_VERSION = "V1"
+- CATS_FACTS= https://catfact.ninja/fact?max_length=24;
+- RATE_LIMIT=10
+- RATE_LIMIT_MS=60000
 
 
 ### 4️⃣ Start the Application
--To run in dev mode: 
+- To run in dev mode: 
 pnpm  start:dev
--To run in prod mode: 
+- To run in prod mode: 
 pnpm  start
 ---
 ## 📬 Example API Response
