@@ -43,7 +43,7 @@ export class ProfileService {
           name: 'Faith Popoola',
           stack: 'Node.js/NestJS',
         },
-        timeStamp: new Date().toISOString(),
+        timestamp: new Date().toISOString(),
         fact: data.fact,
       };
     } catch (error) {
