@@ -62,6 +62,7 @@ Create a `.env` file in the root directory and add any required environment vari
 ## 📬 Example API Response
 
 A successful response from the `/api/profile` endpoint will be in JSON format like this:
+-
 {
 "status": "success",
 "user": {
