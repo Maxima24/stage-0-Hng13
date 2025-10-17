@@ -53,8 +53,10 @@ RATE_LIMIT_MS=60000
 
 
 ### 4️⃣ Start the Application
--To run in dev mode: pnpm  start:dev
--To run in prod mode: pnpm  start
+-To run in dev mode: 
+pnpm  start:dev
+-To run in prod mode: 
+pnpm  start
 ---
 ## 📬 Example API Response
 
