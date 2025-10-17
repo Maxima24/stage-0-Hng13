@@ -1,98 +1,77 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# 🚀 Stage 0 — HNG13 Internship Project
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+A **NestJS** application built for the **HNG13 Internship (Stage 0)**. This backend project exposes a single REST endpoint `/api/profile` that returns developer details along with a dynamic cat fact fetched from an external API. It demonstrates:
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+- REST API design
+- External API integration
+- Error handling
+- Rate limiting
+- Logging
+- Configuration management
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 🧰 Tech Stack
 
-## Project setup
+- ⚡ **NestJS** — Backend framework  
+- 🌐 **Axios** — HTTP client for API calls  
+- 🧱 **@nestjs/throttler** — Rate limiting  
+- ⚙️ **@nestjs/config** — Environment management  
+- 🔒 **CORS** — Cross-Origin Resource Sharing  
+- 🪵 **Nest Logger** — Request/response logging  
+- 🧩 **pnpm** — Package manager  
 
-```bash
-$ pnpm install
-```
+---
 
-## Compile and run the project
+## 🧾 Description
 
-```bash
-# development
-$ pnpm run start
+This project serves as the Stage 0 submission for the **HNG13 internship**. The goal is to create an endpoint that returns:  
 
-# watch mode
-$ pnpm run start:dev
+- Developer name, email, and tech stack  
+- Timestamp  
+- A random cat fact from [catfact.ninja](https://catfact.ninja/fact)  
 
-# production mode
-$ pnpm run start:prod
-```
+---
 
-## Run tests
+## ⚙️ Project Setup
 
-```bash
-# unit tests
-$ pnpm run test
+### 1️⃣ Clone the Repository
+git clone https://github.com/Maxima24/stage-0-Hng13.git
+cd stage-0-Hng13
 
-# e2e tests
-$ pnpm run test:e2e
 
-# test coverage
-$ pnpm run test:cov
-```
+### 2️⃣ Install Dependencies
 
-## Deployment
+pnpm install
+### 3️⃣ Configure Environment Variables
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+Create a `.env` file in the root directory and add any required environment variables. For example:
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+- API_VERSION = "V1"
+- CATS_FACTS= https://catfact.ninja/fact?max_length=24;
+- RATE_LIMIT=10
+- RATE_LIMIT_MS=60000
 
-```bash
-$ pnpm install -g @nestjs/mau
-$ mau deploy
-```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+### 4️⃣ Start the Application
+- To run in dev mode: 
+- pnpm  start:dev
+- To run in prod mode: 
+- pnpm  start
+---
+## 📬 Example API Response
 
-## Resources
+A successful response from the `/api/profile` endpoint will be in JSON format like this:
+-
+{
+"status": "success",
+"user": {
+"email": "steelmaxima27@gmail.com",
+"name": "steelmaxima"
+"stack": "Node.js/NestJS"
+},
+"timeStamp": "2025-10-17T16:44:33.128Z",
+"fact": "A cat sees about 6 times better than a human at night, and needs 1/6 the amount of light that a human does - it has a layer of extra reflecting cells which absorb light."
+}
 
-Check out a few resources that may come in handy when working with NestJS:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
